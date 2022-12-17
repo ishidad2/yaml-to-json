@@ -1,16 +1,23 @@
 {
   "name": "yml-to-json",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "yml-to-json",
   "main": "src/index.js",
   "bin": {
     "yml-to-json": "./bin/ts-index.js"
   },
-  "mode": "development",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "webpack --mode development",
     "build:release": "webpack --mode production"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishidad2/yaml-to-json"
+  },
+  "homepage": "https://github.com/ishidad2/yaml-to-json#readme",
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
