@@ -1,10 +1,10 @@
 {
-  "name": "yaml-to-json",
+  "name": "yml-to-json",
   "version": "0.1.0",
   "description": "",
   "main": "src/index.js",
   "bin": {
-    "yaml-to-json": "./bin/ts-index.js"
+    "yml-to-json": "./bin/ts-index.js"
   },
   "mode": "development",
   "scripts": {
