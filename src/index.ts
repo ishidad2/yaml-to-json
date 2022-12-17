@@ -26,12 +26,18 @@ function read_file(filename: string) : boolean{
     const doc1 = yaml.load(fs.readFileSync(input_file_name, 'utf8'));
     const doc2 = yaml.load(fs.readFileSync(output_file_name, 'utf8'));
 
-    //アウトプット先のファイルにnodeMetadataキーがあるかどうか確認
-    if(doc2.nodeMetadata === undefined){
-      console.log("add nodeMetadata Key...");
+    //アウトプット先のファイルにnodeMetadataキーがあるかどうか確認x
+    if(optional_file_name === undefined){
+      if(doc2.nodeMetadata === undefined){
+        console.log("add nodeMetadata Key...");
+      }else{
+        console.log("update nodeMetadata Key...");
+      }  
     }else{
-      console.log("update nodeMetadata Key...");
+      console.log("new File nodeMetadata Key...");
+      
     }
+    
     let obj = Object.assign(doc2, doc1);
     let outputFile = optional_file_name === undefined ? output_file_name : optional_file_name
     
