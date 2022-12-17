@@ -1,5 +1,8 @@
 # YAML to JSON tools
 
+YAMLファイルをJSONにして書き出すツールです。
+引数オプションにより、既存のJSONへキーを追加することも出来ます。
+
 # Installation
 
 **CLI executable**
@@ -9,8 +12,13 @@ npm install -g yaml-to-json
 
 # Examples
 
-- $ yaml-to-json input.yml update.json
-- $ yaml-to-json input.yml update.json output.json
+```
+$ yaml-to-json input.yml update.json
+
+or
+
+$ yaml-to-json input.yml update.json output.json
+```
 
 # 引数オプション
 
