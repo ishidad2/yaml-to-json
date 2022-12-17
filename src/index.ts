@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const input_file_name : string = process.argv[2];
 const output_file_name: string = process.argv[3];
+const optional_file_name: string = process.argv[4];
 
 //ファイルの存在確認
 function read_file(filename: string) : boolean{
@@ -16,7 +17,7 @@ function read_file(filename: string) : boolean{
 }
 
 (function(){
-  
+
   if(!read_file(input_file_name)) return false;
   if(!read_file(output_file_name)) return false;
 
@@ -32,7 +33,9 @@ function read_file(filename: string) : boolean{
       console.log("update nodeMetadata Key...");
     }
     let obj = Object.assign(doc2, doc1);
-    fs.writeFileSync(output_file_name, JSON.stringify(obj, null, '  '));
+    let outputFile = optional_file_name === undefined ? output_file_name : optional_file_name
+    
+    fs.writeFileSync(outputFile, JSON.stringify(obj, null, '  '));
     console.log('finish!');
     
   } catch (e) {
