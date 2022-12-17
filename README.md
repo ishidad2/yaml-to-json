@@ -12,7 +12,42 @@ npm install -g yaml-to-json
 
 # Examples
 
+Input YAML
+
+```yaml
+nodeMetadata:
+  greeting: "こんにちは"
+  message:  "テキストメッセージだよ"
+  foo:
+    bar: "バー"
+    baz: 
+      greeting: "Hello!"
+      array: [1,2,3,4,5]
 ```
+
+Output JSON
+
+```json
+"nodeMetadata": {
+  "greeting": "こんにちは",
+  "message": "テキストメッセージだよ",
+  "foo": {
+    "bar": "バー",
+    "baz": {
+      "greeting": "Hello!",
+      "array": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  }
+}
+```
+
+```bash
 $ yaml-to-json input.yml update.json
 
 or
